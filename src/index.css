@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Montserrat", system-ui, sans-serif;
+    transition: all 0.3s linear;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+.nav-item-light::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 0%;
+  background: black;
+  transition: all 0.1s linear;
+}
+
+.nav-item-dark::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 0%;
+  background: white;
+  transition: all 0.1s linear;
+}
+
+.nav-item-light:hover::after,
+.nav-item-dark:hover::after {
+  width: 100%;
+}
